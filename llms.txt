@@ -1,0 +1,18 @@
+# Pulse Internet Speed Test
+
+> Pulse Internet Speed Test is a free Chrome extension that measures internet download speed, upload speed, ping and jitter in about 20 seconds from the browser toolbar, using Cloudflare's global speed-test network. It has no ads, needs no account and collects no personal data.
+
+## Key facts
+- Type: Chrome extension (Manifest V3); works in Chrome, Edge and Brave
+- Price: free
+- Measures: download (Mbps), upload (Mbps), ping (ms), jitter (ms)
+- Test length: about 20 seconds (1 s ping, 9 s download, 9 s upload)
+- Method: 12 ping samples (median); 5 parallel download streams; 3 parallel upload streams; first 30% of each phase excluded as ramp-up
+- Server: speed.cloudflare.com, nearest of Cloudflare's 330+ city locations
+- Privacy: last 20 results stored locally in the browser only; no analytics or tracking
+- Author: Sohaib Saqib
+
+## Pages
+- [Home](https://sohaibsaqibai-dot.github.io/pulse-speed-test/): features, how the test works, what counts as a good internet speed, FAQ
+- [Privacy policy](https://sohaibsaqibai-dot.github.io/pulse-speed-test/privacy.html): data handling and permissions
+- [Chrome Web Store](CHROME-WEB-STORE-URL): install page

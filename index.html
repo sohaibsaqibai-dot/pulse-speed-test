@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse Internet Speed Test – Free Chrome Extension for WiFi Speed, Ping & Upload</title>
+<meta name="description" content="Pulse is a free Chrome extension that tests your internet download speed, upload speed, ping and jitter in about 20 seconds from the toolbar. No ads, no sign-up.">
+<link rel="canonical" href="https://sohaibsaqibai-dot.github.io/pulse-speed-test/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pulse Internet Speed Test – Free Chrome Extension">
+<meta property="og:description" content="Test WiFi download & upload speed, ping and jitter in 20 seconds from your Chrome toolbar.">
+<meta property="og:image" content="https://sohaibsaqibai-dot.github.io/pulse-speed-test/screenshot.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon128.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/#app",
+      "name": "Pulse Internet Speed Test",
+      "alternateName": "Pulse",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Internet speed test",
+      "operatingSystem": "Google Chrome, Microsoft Edge, Brave (Chromium browsers)",
+      "browserRequirements": "Requires a Chromium-based browser that supports Manifest V3 extensions",
+      "softwareVersion": "1.0.0",
+      "description": "Pulse is a free Chrome extension that measures internet download speed, upload speed, ping and jitter in about 20 seconds using Cloudflare's global speed-test network.",
+      "featureList": [
+        "Download speed test in Mbps",
+        "Upload speed test in Mbps",
+        "Ping (latency) and jitter in milliseconds",
+        "Live animated gauge and live speed graph",
+        "Plain-English connection verdict for streaming, video calls and gaming",
+        "Local history of recent tests"
+      ],
+      "screenshot": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/screenshot.png",
+      "image": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/icon128.png",
+      "url": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/",
+      "downloadUrl": "CHROME-WEB-STORE-URL",
+      "installUrl": "CHROME-WEB-STORE-URL",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/#person",
+      "name": "Sohaib Saqib",
+      "url": "https://sohaibsaqibai-dot.github.io/pulse-speed-test/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How long does a Pulse speed test take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Pulse speed test takes about 20 seconds: about 1 second for ping, 9 seconds for download and 9 seconds for upload." } },
+        { "@type": "Question", "name": "Is Pulse Internet Speed Test free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pulse Internet Speed Test is completely free, has no ads and does not require an account." } },
+        { "@type": "Question", "name": "What is a good internet speed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A download speed of 25 Mbps or more with ping under 80 ms is good enough for 4K streaming and video calls. 100 Mbps or more with ping under 40 ms is excellent for several users streaming and gaming at once." } },
+        { "@type": "Question", "name": "Does Pulse collect my data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Pulse does not collect, sell or share personal data. Test history is stored only in the user's own browser." } },
+        { "@type": "Question", "name": "Which server does Pulse use to test speed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pulse uses Cloudflare's public speed-test service at speed.cloudflare.com and automatically connects to the nearest of Cloudflare's 330+ city locations." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{--bg:#090B10;--surface:#11141C;--line:#222838;--text:#EEF1F7;--muted:#8A93A8;--dl:#2EE6B0;--dl2:#7CF5FF;--ul:#A78BFA;--ping:#FBBF24;
+--sans:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--mono:ui-monospace,Consolas,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(900px 500px at 70% -10%,rgba(46,230,176,.10),transparent 70%),var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
+a{color:var(--dl)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+.logo img{width:30px;height:30px;border-radius:8px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 0 64px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.1;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--dl),var(--dl2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:18px;margin:18px 0 28px;max-width:34em}
+.cta{display:inline-block;padding:14px 26px;border-radius:99px;font-weight:700;color:#04120D;text-decoration:none;background:linear-gradient(90deg,var(--dl),var(--dl2));box-shadow:0 10px 30px -10px rgba(46,230,176,.7)}
+.small{font-size:13px;color:var(--muted);margin-top:12px}
+.hero .shot{display:block;width:100%;max-width:372px;height:auto;margin:0 auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 30px 80px -30px rgba(46,230,176,.35)}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;letter-spacing:-.01em;margin-bottom:14px}
+h3{font-size:18px;margin:22px 0 6px}
+p{max-width:46em;color:#C9CFDC}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card b{display:block;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.card p{font-size:14px}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+ol{margin:12px 0 0 20px;color:#C9CFDC}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="./"><img src="icon128.png" alt="">Pulse</a>
+    <a href="privacy.html">Privacy</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Free <span>internet speed test</span> in your Chrome toolbar</h1>
+        <p class="lead"><strong>Pulse Internet Speed Test</strong> is a free Chrome extension that measures your download speed, upload speed, ping and jitter in about 20 seconds, without opening a new tab.</p>
+        <a class="cta" href="CHROME-WEB-STORE-URL">Add to Chrome, it's free</a>
+        <p class="small">No ads · No account · Works in Chrome, Edge and Brave</p>
+      </div>
+      <img class="shot" src="popup.png" alt="Pulse Internet Speed Test popup showing 275 Mbps download, 134 Mbps upload, 48 ms ping and 6.2 ms jitter" width="372" height="586">
+    </div>
+
+    <section>
+      <h2>What does Pulse measure?</h2>
+      <p>Pulse measures the four numbers that decide how fast your internet feels: download speed, upload speed, ping and jitter. Each result is shown on a live gauge and graph while the test runs.</p>
+      <div class="grid">
+        <div class="card"><b style="color:var(--dl)">Download</b><p>Download speed, in Mbps, is how fast data reaches your device. It affects streaming, downloads and page loads.</p></div>
+        <div class="card"><b style="color:var(--ul)">Upload</b><p>Upload speed, in Mbps, is how fast data leaves your device. It affects video calls, file sharing and cloud backups.</p></div>
+        <div class="card"><b style="color:var(--ping)">Ping</b><p>Ping, in milliseconds, is how quickly your connection responds. Lower ping means less lag in games and calls.</p></div>
+        <div class="card"><b style="color:#60A5FA">Jitter</b><p>Jitter, in milliseconds, is how much your ping changes. Low jitter means stable, smooth calls and games.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How does Pulse test internet speed?</h2>
+      <p>Pulse tests internet speed by sending and receiving data through Cloudflare's public speed-test service, which automatically picks the nearest of Cloudflare's 330+ city locations. A full test takes about 20 seconds and follows three steps:</p>
+      <ol>
+        <li><strong>Ping and jitter (about 1 second):</strong> Pulse times 12 small requests, reports the median as ping and the average change between requests as jitter.</li>
+        <li><strong>Download (9 seconds):</strong> Pulse downloads test data over 5 parallel connections.</li>
+        <li><strong>Upload (9 seconds):</strong> Pulse uploads random test data over 3 parallel connections.</li>
+      </ol>
+      <p style="margin-top:12px">Pulse ignores the first 30% of each download and upload phase, while the connection is still ramping up, so the final number reflects your sustained speed rather than the slow start.</p>
+    </section>
+
+    <section>
+      <h2>What is a good internet speed?</h2>
+      <p>A good internet speed for most homes is 25 Mbps download or more with ping under 80 ms, which supports 4K streaming and HD video calls. Pulse uses these bands to give every result a plain-English verdict:</p>
+      <table>
+        <thead><tr><th>Download speed</th><th>Rating</th><th>Good for</th></tr></thead>
+        <tbody>
+          <tr><td>100+ Mbps (ping under 40 ms)</td><td>Excellent</td><td>4K streaming, large downloads and gaming at the same time</td></tr>
+          <tr><td>25–100 Mbps</td><td>Great</td><td>4K video, fast video calls, online gaming</td></tr>
+          <tr><td>10–25 Mbps</td><td>Good</td><td>HD streaming and video calls</td></tr>
+          <tr><td>3–10 Mbps</td><td>Fair</td><td>Browsing and standard-definition video</td></tr>
+          <tr><td>Under 3 Mbps</td><td>Slow</td><td>Basic browsing only</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions</h2>
+      <h3>How long does a Pulse speed test take?</h3>
+      <p>A Pulse speed test takes about 20 seconds: about 1 second for ping, 9 seconds for download and 9 seconds for upload.</p>
+      <h3>Is Pulse Internet Speed Test free?</h3>
+      <p>Yes. Pulse Internet Speed Test is completely free, has no ads and does not require an account.</p>
+      <h3>Why is my WiFi speed lower than my internet plan?</h3>
+      <p>WiFi speed is usually lower than the speed of your internet plan because of distance from the router, walls, other devices on the network and the 2.4 GHz band. Run Pulse next to your router and then in another room to see how much speed your WiFi loses.</p>
+      <h3>Does Pulse collect my data?</h3>
+      <p>No. Pulse does not collect, sell or share personal data. Your test results are stored only in your own browser. Read the <a href="privacy.html">privacy policy</a>.</p>
+      <h3>Which browsers does Pulse work in?</h3>
+      <p>Pulse works in Google Chrome and other Chromium browsers that install extensions from the Chrome Web Store, including Microsoft Edge and Brave.</p>
+    </section>
+  </main>
+
+  <footer>
+    Pulse Internet Speed Test · Made by Sohaib Saqib · Version 1.0.0 · <a href="privacy.html">Privacy policy</a>
+  </footer>
+</div>
+</body>
+</html>
