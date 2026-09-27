@@ -15,4 +15,4 @@
 ## Pages
 - [Home](https://sohaibsaqibai-dot.github.io/pulse-speed-test/): features, how the test works, what counts as a good internet speed, FAQ
 - [Privacy policy](https://sohaibsaqibai-dot.github.io/pulse-speed-test/privacy.html): data handling and permissions
-- [Chrome Web Store](CHROME-WEB-STORE-URL): install page
+- [Chrome Web Store](https://chromewebstore.google.com/detail/mjjkbjnjdjmmghgbkifdgdhofoaohblj): install page
